@@ -106,3 +106,23 @@ void list_insert (List* list, int index,int value){
 	}
 
 }	
+/*
+	int list_remove(List* list,int index){
+		if(index < 0 || index >= list->legth) return;
+		int i;
+
+		int itemRemoved = list->array[index];
+
+		for(i = index; i < list->length - 1; i++)
+			list->array[i] = list->array[i+1];
+	}
+	list->array[list->length-1] = NULL;
+	list->length--;
+
+	if(list->length <=  list->size/4){
+		list->array = (int*) realloc(list->array,(list->size/2)*sizeof(int));
+		list->size = list->size/2;
+	}
+
+	return itemRemoved;
+*/
