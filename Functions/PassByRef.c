@@ -1,5 +1,10 @@
 #include <stdio.h>
-// Pass by reference aka pass by pointer.
+/*
+  Pass by reference aka pass by pointer.
+  Passing by by reference refers to a method of passing the address of
+  an argument in the calling function to a corresponding parameter in the
+  called function.
+*/ 
 
 void add_one(int *a);
 
