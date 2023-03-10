@@ -3,34 +3,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void insertion_sort(int*,int);
-void troca(int *a,int *b);
+void insertionSort(int*,int);
+void changeVarValue(int *a,int *b);
 
 int main(){
 
 
-    int vetor[10],i;
+    int array[10],i;
 
     for ( i = 0; i < 10; i++)
     {
-        vetor[i] = rand() % 100;
+        array[i] = rand() % 100;
     }
     
     for (int i = 0; i < 10; ++i)
-        printf("%i, ", vetor[i]);
+        printf("%i, ", array[i]);
 
-    insertion_sort(vetor,10);
+    insertion_sort(array,10);
 
         printf("\n");
 
     for (int i = 0; i < 10; ++i)
-        printf("%i, ", vetor[i]);
+        printf("%i, ", array[i]);
     
 
 
     return 0;
 }
-void insertion_sort(int *v, int n){
+void insertionSort(int *v, int n){
 
     int i,j;
     int aux;
@@ -39,14 +39,14 @@ void insertion_sort(int *v, int n){
         for(j = i; j > 0; --j){
             if(v[j-1]>v[j]){
 
-                 troca(&v[j],&v[j-1]);
+                 changeVarValue(&v[j],&v[j-1]);
             }
         }
     }
 
 
 }
-void troca(int *a,int *b){
+void changeVarValue(int *a,int *b){
 
 int aux;
 aux = *a;
