@@ -29,7 +29,13 @@
 		- Store that size.
 
 	}
+	 totalSize = headerSize + size;
+	-> Call Sbrk(totalSize);
 
+	Memory Blocks
+	[HEADER][ACTUAL MEM BLOCK]
+	Can't be completely sure the blocks of memory allocated
+	by malloc is contiguous.
 
 */
 
@@ -37,3 +43,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// MEM LINKED LIST
+// size = size of bytes of a mem block
+// isFree = stores if block is free or not
+// *next points to next mem block.
+struct header_t
+{
+	size_t size;
+	unsigned isFree;
+	struct header_t *next;
+};
