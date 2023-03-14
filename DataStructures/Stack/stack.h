@@ -1,5 +1,4 @@
 
-
 typedef struct stack Stack;
 
 Stack *stackCreate(int size);

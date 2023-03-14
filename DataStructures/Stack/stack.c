@@ -4,21 +4,17 @@
 #include "stack.h"
 
 typedef struct stack{
-
   int stackSize;
   int stackItemsQuantity;
   int *array;
-
 }Stack;
 
 Stack *stackCreate(int size){
-
-  Stack *myStack = (Stack*)malloc(sizeof(Stack));
-  myStack->stackItemsQuantity = 0;
-  myStack->stackSize = size;
-  myStack->array = (int*)malloc(size*sizeof(int));
-  return myStack;
-
+Stack *myStack = (Stack*)malloc(sizeof(Stack));
+myStack->stackItemsQuantity = 0;
+myStack->stackSize = size;
+myStack->array = (int*)malloc(size*sizeof(int));
+return myStack;
 }
 
 void stackFree(Stack *stack){
